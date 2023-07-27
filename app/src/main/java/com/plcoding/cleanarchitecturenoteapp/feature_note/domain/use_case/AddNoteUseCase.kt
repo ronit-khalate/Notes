@@ -5,7 +5,7 @@ import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.model.Note
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.repository.NoteRepository
 import kotlin.jvm.Throws
 
-class AddNote(
+class AddNoteUseCase(
     private val repository: NoteRepository
 ) {
 
@@ -22,6 +22,6 @@ class AddNote(
             throw InvalidNoteException("The Content Of The Note Can't Be Empty.")
         }
 
-        repository.
+        repository.insertNote(note)
     }
 }
